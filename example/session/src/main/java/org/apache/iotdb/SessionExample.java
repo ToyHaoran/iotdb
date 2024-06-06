@@ -67,6 +67,8 @@ public class SessionExample {
 
   public static void main(String[] args)
       throws IoTDBConnectionException, StatementExecutionException {
+
+    // 初始化session
     session =
         new Session.Builder()
             .host(LOCAL_HOST)
