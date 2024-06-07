@@ -71,12 +71,14 @@ public class SessionExample {
     // 初始化session
     session =
         new Session.Builder()
-            .host(LOCAL_HOST)
+            .host("192.168.150.100")
             .port(6667)
             .username("root")
             .password("root")
-            .version(Version.V_1_0)
+            .version(Version.V_0_13)
             .build();
+
+    // 开启session，不开启RPC压缩
     session.open(false);
 
     // set session fetchSize
